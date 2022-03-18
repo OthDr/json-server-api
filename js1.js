@@ -83,6 +83,47 @@ async function getWich() {
 }
 
 
+async function getWithM() {
+    document.getElementById("news").innerHTML = "";// to clear previous data
+    
+    let component = '';
+    let myDiv = document.getElementById("news");
+
+    x= document.getElementById("input1").value;
+    
+        
+        const myURL = "http://localhost:3000/news";
+        const response = await fetch(myURL);
+        const result = await response.json();
+
+        
+            result.forEach(element => {
+                element.articles.forEach(element =>{
+                    let m =element.title;
+                    if(m.startsWith('M')){
+                        component += 
+                        `<div class="post">
+                        <h3>Title: <a href='#'>${element.title}</a></h2>
+                        <img src='news.jpg'></img>
+                        <p>${element.description}</>
+                        <p>${element.content}</p>
+                        <h5>Author: ${element.author}</h5>
+                        <span>${element.publishedAt}</span>
+                        </div>
+                        `;
+                        console.log(element.author);
+                    }
+                })       
+            });
+            myDiv.innerHTML = component;
+       
+            document.getElementById("h2").innerHTML = "News which title starts with M ";
+        
+    
+    
+}
+
+
 async function getLatest() {
 
     document.getElementById("news").innerHTML = "";
