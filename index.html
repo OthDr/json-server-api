@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <link rel="stylesheet" type="text/css" href="styles1.css">
         <style>
-            .post{
-                margin-top: 5px;
-                padding: 5PX;
-                background-color: bisque;
-            }
+           
         </style>
     
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Doth News</title>
 </head>
 <body>
+    <header>
+        <div class="nav"> 
+            <div class="logo">
+                <span><p>DOth News</p></span>
+            </div>
+            <ul>
+                <li><a href="#" onclick="getLatest()">Latest News</a></li>
+                <li><a href="#" onclick="getAll()">All News</a></li>
+            </ul>
+        </div>
+    </header>
 
+    <div id="cover">
+        <form method="get" action="">
+          <div class="tb">
+            <div class="td"><input type="text" placeholder="Search about .." required id="input1"></div>
+            <div class="td" id="s-cover">
+              <button type="submit" id="button" onclick="getWich()">
+                <div id="s-circle"></div>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>    
+    
+    <div class="container">
+      <h2 id="h2"></h2>
+      <br>
+      <div class="main-news" id="news" style="color: darkblue;">
+      
+          
+      </div>
 
-    <div class="div" id="news"
-    style="color: brown;">
-        
     </div>
 
+    
+    <footer><h5>DERRAR Othmane &copy;</h5></footer>
 
     <script  src="js1.js"></script>
 </body>
