@@ -1,12 +1,3 @@
-//alert("js1");
-
-/*
-var unirest = require('unirest');
-var myRequest = unirest("GET", "http://localhost:3000/news");
-console.log("hellooooooo");
-*/
-
-
 
 async function getAll() {
     document.getElementById("news").innerHTML = "";
