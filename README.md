@@ -1,7 +1,5 @@
 # REST-api-ALOS-project-ISI
 
-DERRAR OTHMANE G2 ISI
-----------------------
 
 About
 
